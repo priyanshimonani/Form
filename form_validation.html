@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="application/javascript">
+            function getData()
+            {
+                var un=document.getElementById("name");
+                var em=document.getElementById("email");
+                if(un.value=="")
+                {
+                    alert("Please enter name");
+                    un.focus();
+                    return false;
+                }
+                if(em.value=="")
+                {
+                    alert("Please enter e-mail");
+                    em.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+        <title>Contact Details</title>
+    </head>
+    <body>
+        <h2>Enter your contact details</h2>
+        <br/>
+        <form id="form1" onsubmit="return getData()">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name">
+            <br/><br/>
+            <label for"email">E.mail: </label>
+            <input type="email" id="email" name="email">
+            <br/><br/>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>
